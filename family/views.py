@@ -4,7 +4,7 @@ from family.models import Family
 
 
 def create_family(request):
-   new_family = Family.objects.create()
+   new_family = Family.objects.create(name='Micaela', age=36 , minor= False)
    print(new_family)
    return HttpResponse('se creo un nuevo miembro')
 
