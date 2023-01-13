@@ -4,7 +4,7 @@ from family.models import Family
 
 
 def create_family(request):
-   new_family = Family.objects.create(name='Micaela', age=36 , minor= False)
+   new_family = Family.objects.create(name='Salvador', age=8, minor= True)
    print(new_family)
    return HttpResponse('se creo un nuevo miembro')
 
@@ -15,3 +15,4 @@ def list_members(request):
         'family':all_members
     }
     return render(request,'list_members.html',context=context)
+
